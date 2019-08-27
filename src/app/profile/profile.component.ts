@@ -1,14 +1,16 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { FormGroup, Validators, FormControl } from '@angular/forms';
+import { FormGroup } from '@angular/forms';
 
 declare var google;
 
 @Component({
-  selector: 'app-register-dos',
-  templateUrl: './register-dos.component.html',
-  styleUrls: ['./register-dos.component.css']
+  selector: 'app-profile',
+  templateUrl: './profile.component.html',
+  styleUrls: ['./profile.component.css']
 })
-export class RegisterDosComponent implements OnInit {
+
+
+export class ProfileComponent implements OnInit {
 
   @ViewChild('googleMap', { static: false }) gMapElement: any;
   @ViewChild('inputPartida', { static: false }) inputPartidaElement: any;
@@ -19,24 +21,7 @@ export class RegisterDosComponent implements OnInit {
   directionsService: any;
   directionsDisplay: any;
 
-  constructor() {
-
-
-    this.formulario = new FormGroup({
-      puntoPartida: new FormControl('', [
-        Validators.required,
-        Validators.maxLength(15)
-      ]),
-      puntoDestino: new FormControl('', [
-        Validators.required,
-        Validators.minLength(3)
-      ]),
-
-    }
-  
-  }
-
-
+  constructor() { }
 
   ngOnInit() {
     if (navigator.geolocation) {
@@ -119,5 +104,6 @@ export class RegisterDosComponent implements OnInit {
       }
     }
   }
+
 
 }

@@ -2,7 +2,7 @@ export class User {
 
     nombre: string;
     apellidos: string;
-    edad: number;
+    fechanacimiento: Date;
     usuario: string;
     email: string;
     password: string;
@@ -10,11 +10,11 @@ export class User {
     destino: number;
     hora: string;
 
-    constructor(pNombre, pApellidos, pEdad, pUsuario, pEmail, pPassword, pPartida, pDestino, pHora) {
+    constructor(pNombre, pApellidos, pFechanacimiento, pUsuario, pEmail, pPassword, pPartida, pDestino, pHora) {
 
         this.nombre = pNombre;
         this.apellidos = pApellidos;
-        this.edad = pEdad;
+        this.fechanacimiento = pFechanacimiento;
         this.email = pEmail;
         this.usuario = pUsuario;
         this.password = pPassword;
