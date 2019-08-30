@@ -2,7 +2,7 @@ export class User {
 
     nombre: string;
     apellidos: string;
-    fechanacimiento: Date;
+    fecha_nacimiento: Date;
     usuario: string;
     email: string;
     password: string;
@@ -14,7 +14,7 @@ export class User {
 
         this.nombre = pNombre;
         this.apellidos = pApellidos;
-        this.fechanacimiento = pFechanacimiento;
+        this.fecha_nacimiento = pFechanacimiento;
         this.email = pEmail;
         this.usuario = pUsuario;
         this.password = pPassword;
